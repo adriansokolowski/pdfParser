@@ -11,19 +11,18 @@ class PdfParser extends Parser
 
     public function __construct($pdf)
     {
+        $parser = new \Smalot\PdfParser\Parser();
+        $pdf = $parser->parseFile($pdf);
         $this->file = $pdf;
         $this->text($pdf);
     }
 
     public function text($pdf): string
     {
-        $parser = new \Smalot\PdfParser\Parser();
-        $pdf = $parser->parseFile($pdf);
-
         return $pdf->getText();
     }
 
-    public function data(): string
+    public function results(): string
     {
         return $this->text($this->file);
     }

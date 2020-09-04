@@ -14,9 +14,7 @@
 
 <body>
     <section class="container">
-        <h1>Text from the pdf</h1>
-
-        {{ $pdfText }}
+        @yield('content')
     </section>
 </body>
 

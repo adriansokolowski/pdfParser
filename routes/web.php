@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','ParserController@index');
+Route::get('/','PdfController@index');
+Route::get('/pdf/{id}','PdfController@show');
 
+Route::post('/pdf', 'PdfController@store')->name('pdf');
 
