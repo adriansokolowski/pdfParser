@@ -28,7 +28,7 @@ class PdfController extends Controller
             ]
         );
 
-        return view('pdfs.index', compact('pdfText'));
+        return back();
     }
 
     public function show($id)
